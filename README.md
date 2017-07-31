@@ -1,5 +1,7 @@
 # Poker4Fun Mobile
 
+<img width="320" alt="Poker4Fun Mobile Screenshot" src="https://user-images.githubusercontent.com/4647136/28768664-185246c6-760b-11e7-995b-ad4d5b878531.PNG">
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
