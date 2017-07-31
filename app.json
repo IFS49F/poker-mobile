@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "Poker4Fun",
+    "description": "A Scrum pointing poker app.",
+    "slug": "poker4fun",
+    "icon": "app-icon.png",
+    "version": "0.1.0",
+    "sdkVersion": "19.0.0",
+    "privacy": "public",
+    "ios": {
+      "bundleIdentifier": "com.ifs49f.poker4fun"
+    },
+    "android": {
+      "package": "com.ifs49f.poker4fun"
+    }
+  }
+}
