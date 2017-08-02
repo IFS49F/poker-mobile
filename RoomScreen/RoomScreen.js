@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, Share } from 'react-native';
 
 export default class RoomScreen extends React.Component {
   static navigationOptions = ({ navigation }) => ({
@@ -7,7 +7,15 @@ export default class RoomScreen extends React.Component {
     headerRight: (
       <Button
         title='Share'
-        onPress={() => {}} />
+        onPress={() => {
+          Share.share({
+            message: 'Join Poker4Fun session',
+            url: `https://poker4.fun/${navigation.state.params.room}`,
+            excludedActivityTypes: [
+              'com.apple.UIKit.activity.AddToReadingList'
+            ]
+          });
+        }} />
     ),
   });
 
