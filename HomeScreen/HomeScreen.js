@@ -35,7 +35,6 @@ export default class HomeScreen extends React.Component {
             onChangeText={(roomName) => this.setState({ roomName })} />
           <Button
             title="Start or Join a session"
-            color="#4169e1"
             onPress={() => navigate('Room', { room: roomName })} />
         </View>
       </View>
@@ -46,7 +45,6 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -77,7 +75,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     paddingVertical: 5,
     borderBottomWidth: 2,
-    borderBottomColor: '#000',
+    borderBottomColor: 'black',
     textAlign: 'center',
   }
 });
