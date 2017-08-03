@@ -46,6 +46,8 @@ const styles = StyleSheet.create({
   face: {
     width: 60,
     height: 90,
+    borderWidth: 2,
+    borderColor: 'darkslategrey',
     borderRadius: 10,
     backgroundColor: 'lightgrey',
     overflow: 'hidden',
