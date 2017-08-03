@@ -31,6 +31,7 @@ export default class HomeScreen extends React.Component {
           </Text>
           <TextInput
             style={styles.formInput}
+            autoCapitalize="none"
             placeholder={this.state.randomRoomName}
             onChangeText={(roomName) => this.setState({ roomName })} />
           <Button
