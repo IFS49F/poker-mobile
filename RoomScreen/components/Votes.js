@@ -2,12 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Card from './Card';
 
+const collator = { compare: (a, b) => a.localeCompare(b) };
+
 export default class Votes extends React.Component {
   render() {
     const { me, myScore, team, show } = this.props;
     const listItems = team
       .slice() // shallow copy to prevent sort from mutating the state directly
-      .sort((a, b) => (a.name > b.name ? 1 : -1))
+      .sort((a, b) => collator.compare(a.name, b.name))
       .map((member) =>
         <View key={member.id} style={styles.person}>
           <Card
