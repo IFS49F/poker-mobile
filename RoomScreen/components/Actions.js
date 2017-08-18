@@ -48,6 +48,11 @@ export default class Actions extends React.Component {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
+    backgroundColor: 'rgb(239, 239, 242)',
+    shadowColor: 'black',
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    shadowOffset: { width: 0, height: 2 },
   },
   votesList: {
     flexDirection: 'row',

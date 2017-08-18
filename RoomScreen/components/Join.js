@@ -55,7 +55,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    width: '100%',
     padding: 20,
+    backgroundColor: 'rgb(239, 239, 242)',
+    shadowColor: 'black',
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    shadowOffset: { width: 0, height: 2 },
   },
   textInput: {
     borderBottomWidth: 2,

@@ -22,7 +22,7 @@ export default class Summary extends React.Component {
       .entries(votes)
       .sort((a, b) => (b[1] - a[1]))
       .map((score) =>
-        <View style={[styles.container, styles.valuesPair]} key={score[0]}>
+        <View style={[styles.valuesPair]} key={score[0]}>
           <View style={styles.scoreContainer}>
             <Text style={styles.score}>{score[0]}</Text>
           </View>
@@ -43,9 +43,19 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     alignItems: 'center',
-    paddingBottom: 20,
+    width: '100%',
+    backgroundColor: 'rgb(239, 239, 242)',
+    shadowColor: 'black',
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    shadowOffset: { width: 0, height: -2 },
+    elevation: 1,
   },
   valuesPair: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    alignItems: 'center',
     margin: 10,
   },
   scoreContainer: {
