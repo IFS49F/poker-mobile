@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Share } from 'react-native';
+import { StyleSheet, Text, View, Button, Share, AsyncStorage } from 'react-native';
 import Notification from './components/Notification';
 import Join from './components/Join';
 import Actions from './components/Actions';
@@ -34,6 +34,8 @@ export default class RoomScreen extends React.Component {
       show: false,
       disconnected: false
     };
+    this.room = this.props.navigation.state.params.room;
+    this.playing = false;
   }
 
   componentDidMount() {
@@ -54,6 +56,7 @@ export default class RoomScreen extends React.Component {
 
     this.socket.on('connect_error', (reason) => {
       this.setState({
+        me: null,
         disconnected: true,
         reconnCountdown: Math.floor(this.socket.io.reconnectionDelayMax() / 1000)
       });
@@ -65,7 +68,16 @@ export default class RoomScreen extends React.Component {
       });
     });
 
-    this.room = this.props.navigation.state.params.room;
+    this.socket.on('reconnect', async () => {
+      this.socket.emit('join', this.room);
+      try {
+        const playerName = await AsyncStorage.getItem(playerNameStoreKey);
+        if (this.playing && playerName) {
+          this.handlePlayerJoin(playerName);
+        }
+      } catch (error) {}
+    });
+
     this.socket.emit('join', this.room);
   }
 
@@ -78,6 +90,7 @@ export default class RoomScreen extends React.Component {
   };
 
   handlePlayerJoin = (name) => {
+    this.playing = true;
     this.setState({
       me: {
         id: this.socket.id,
@@ -156,3 +169,4 @@ const styles = StyleSheet.create({
 
 const appDomain = 'poker4.fun';
 const serverUrl = 'https://api.poker4.fun/';
+const playerNameStoreKey = '@Poker4FunStore:playerName';
