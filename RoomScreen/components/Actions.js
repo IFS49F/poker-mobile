@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { validScores } from '../../lib/constants';
+import { sizeRatio, validScores } from '../../lib/constants';
 
 export default class Actions extends React.Component {
   checkSelectedValue(value, selectedValue) {
@@ -18,7 +18,6 @@ export default class Actions extends React.Component {
       return (
         <Button
           key={item}
-          style={styles.voteButton}
           title={`${item}`}
           onPress={() => onVote(item)} />
       );
@@ -47,7 +46,8 @@ export default class Actions extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    padding: 20,
+    width: '100%',
+    padding: 10,
     backgroundColor: 'rgb(239, 239, 242)',
     shadowColor: 'black',
     shadowOpacity: 0.3,
@@ -59,9 +59,5 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     alignItems: 'center',
-  },
-  voteButton: {
-    width: 20,
-    height: 20,
   },
 });

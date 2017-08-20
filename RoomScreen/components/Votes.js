@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Card from './Card';
+import { sizeRatio } from '../../lib/constants';
 
 const collator = { compare: (a, b) => a.localeCompare(b) };
 
@@ -49,6 +50,7 @@ export default class Votes extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    width: '100%',
   },
   content: {
     flexDirection: 'row',
@@ -57,10 +59,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   person: {
-    margin: 20,
+    margin: 20 * sizeRatio,
   },
   name: {
-    width: 60,
+    width: 60 * sizeRatio,
+    fontSize: 12 * sizeRatio,
     textAlign: 'center',
     overflow: 'hidden',
   },

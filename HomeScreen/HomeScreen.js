@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: 'rgba(255, 255, 255, 0.7)',
     justifyContent: 'center',
+    alignItems: 'center',
   },
   formTitle: {
     marginBottom: 5,
@@ -73,6 +74,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   formInput: {
+    width: 300,
     marginVertical: 10,
     paddingVertical: 5,
     borderBottomWidth: 2,

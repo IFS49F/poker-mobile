@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import FlipCard from 'react-native-flip-card';
+import { sizeRatio } from '../../lib/constants';
 
 export default class Card extends React.Component {
   showVoteValue() {
@@ -44,8 +45,8 @@ const styles = StyleSheet.create({
     opacity: 1,
   },
   face: {
-    width: 60,
-    height: 90,
+    width: 60 * sizeRatio,
+    height: 90 * sizeRatio,
     borderWidth: 2,
     borderColor: 'darkslategrey',
     borderRadius: 10,
@@ -57,12 +58,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'darkslategrey',
-    fontSize: 30,
+    fontSize: 30 * sizeRatio,
     textAlign: 'center',
-    lineHeight: 90,
+    lineHeight: 90 * sizeRatio,
   },
   backText: {
     color: 'lightslategrey',
-    lineHeight: 80,
+    lineHeight: 80 * sizeRatio,
   }
 });

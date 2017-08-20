@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { sizeRatio } from '../../lib/constants';
 
 export default class Summary extends React.Component {
   render() {
@@ -59,19 +60,19 @@ const styles = StyleSheet.create({
     margin: 10,
   },
   scoreContainer: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
+    width: 50 * sizeRatio,
+    height: 50 * sizeRatio,
+    borderRadius: 25 * sizeRatio,
     backgroundColor: 'lightgrey',
     overflow: 'hidden',
   },
   score: {
     color: 'darkslategrey',
-    fontSize: 20,
+    fontSize: 20 * sizeRatio,
     textAlign: 'center',
-    lineHeight: 50,
+    lineHeight: 50 * sizeRatio,
   },
   count: {
-    fontSize: 15,
+    fontSize: 15 * sizeRatio,
   },
 });
