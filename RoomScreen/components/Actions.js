@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 import { sizeRatio, validScores } from '../../lib/constants';
 
 export default class Actions extends React.Component {
@@ -16,10 +16,15 @@ export default class Actions extends React.Component {
     const listItems = validScores.map((item) => {
       const isSelected = this.checkSelectedValue(item, myScore);
       return (
-        <Button
+        <TouchableOpacity
           key={item}
-          title={`${item}`}
-          onPress={() => onVote(item)} />
+          style={isSelected ? styles.votesButtonSelected : styles.votesButton}
+          onPress={() => onVote(item)}>
+          <Text
+            style={styles.votesButtonText}>
+            {item}
+          </Text>
+        </TouchableOpacity>
       );
     });
 
@@ -59,5 +64,20 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     alignItems: 'center',
+  },
+  votesButton: {
+    margin: 3 * sizeRatio,
+    padding: 5 * sizeRatio,
+    borderRadius: 5 * sizeRatio,
+  },
+  votesButtonSelected: {
+    margin: 3 * sizeRatio,
+    padding: 5 * sizeRatio,
+    borderRadius: 5 * sizeRatio,
+    backgroundColor: 'lightgrey',
+  },
+  votesButtonText: {
+    fontSize: 16 * sizeRatio,
+    color: 'royalblue',
   },
 });
