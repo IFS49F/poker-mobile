@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     width: '100%',
-    borderTopColor: 'rgb(227, 227, 232)',
+    borderTopColor: 'rgb(219, 219, 219)',
     borderTopWidth: 1,
   },
   valuesPair: {

@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     padding: 10,
-    borderBottomColor: 'rgb(227, 227, 232)',
+    borderBottomColor: 'rgb(219, 219, 219)',
     borderBottomWidth: 1,
   },
   votesList: {

@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     padding: 20,
-    borderBottomColor: 'rgb(227, 227, 232)',
+    borderBottomColor: 'rgb(219, 219, 219)',
     borderBottomWidth: 1,
   },
   textInput: {
