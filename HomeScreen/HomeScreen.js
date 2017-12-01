@@ -4,7 +4,7 @@ import { hri } from 'human-readable-ids';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Poker4Fun'
+    header: null
   };
 
   constructor(props) {
@@ -59,11 +59,11 @@ const styles = StyleSheet.create({
   },
   formView: {
     position: 'absolute',
-    top: '25%',
+    top: '30%',
     left: 0,
     padding: '5%',
     width: '100%',
-    backgroundColor: 'rgba(255, 255, 255, 0.7)',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
     justifyContent: 'center',
     alignItems: 'center',
   },

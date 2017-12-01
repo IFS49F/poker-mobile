@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, Share, AsyncStorage } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, Button, Share, AsyncStorage } from 'react-native';
 import Notification from './components/Notification';
 import Join from './components/Join';
 import Actions from './components/Actions';
@@ -129,7 +129,7 @@ export default class RoomScreen extends React.Component {
   render() {
     const { me, myScore, team, show, disconnected } = this.state;
     return (
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         {me ? (
           <Actions
             show={show}
@@ -153,7 +153,7 @@ export default class RoomScreen extends React.Component {
         <Notification
           active={disconnected}
           onReconn={this.handleReconn} />
-      </View>
+      </SafeAreaView>
     );
   }
 }
@@ -161,7 +161,6 @@ export default class RoomScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },

@@ -53,11 +53,8 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     padding: 10,
-    backgroundColor: 'rgb(239, 239, 242)',
-    shadowColor: 'black',
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
-    shadowOffset: { width: 0, height: 2 },
+    borderBottomColor: 'rgb(227, 227, 232)',
+    borderBottomWidth: 1,
   },
   votesList: {
     flexDirection: 'row',

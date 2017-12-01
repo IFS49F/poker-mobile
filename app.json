@@ -5,7 +5,7 @@
     "slug": "poker4fun",
     "icon": "app-icon.png",
     "version": "0.1.0",
-    "sdkVersion": "19.0.0",
+    "sdkVersion": "23.0.0",
     "privacy": "public",
     "ios": {
       "bundleIdentifier": "com.ifs49f.poker4fun"

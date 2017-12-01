@@ -5,7 +5,10 @@ import RoomScreen from './RoomScreen/RoomScreen';
 
 const App = StackNavigator({
   Home: { screen: HomeScreen },
-  Room: { screen: RoomScreen }
+  Room: {
+    screen: RoomScreen,
+    path: "/:room",
+  },
 });
 
 export default App;
