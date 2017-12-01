@@ -1,6 +1,6 @@
 # Poker4Fun Mobile
 
-<img width="320" alt="Poker4Fun Mobile Screenshot" src="https://user-images.githubusercontent.com/4647136/28768664-185246c6-760b-11e7-995b-ad4d5b878531.PNG">
+<img width="398" alt="Poker4Fun Mobile Screenshot" src="https://user-images.githubusercontent.com/4647136/33477563-0d3282ee-d6c1-11e7-9ae5-3c567c2be74b.png">
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
