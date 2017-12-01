@@ -63,13 +63,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   votesButton: {
-    margin: 3 * sizeRatio,
-    padding: 5 * sizeRatio,
+    margin: 4 * sizeRatio,
+    padding: 8 * sizeRatio,
     borderRadius: 5 * sizeRatio,
   },
   votesButtonSelected: {
-    margin: 3 * sizeRatio,
-    padding: 5 * sizeRatio,
+    margin: 4 * sizeRatio,
+    padding: 8 * sizeRatio,
     borderRadius: 5 * sizeRatio,
     backgroundColor: 'lightgrey',
   },
